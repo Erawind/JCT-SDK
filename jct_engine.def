@@ -1,0 +1,4 @@
+LIBRARY jct_engine.dll
+
+EXPORTS
+jct_core_process
