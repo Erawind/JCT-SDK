@@ -33,7 +33,7 @@ By implementing an empirical **acceleration-threshold patch** ($a_0 \approx 1.21
 # Build the C core
 gcc -O3 -shared -fPIC -o jct_engine.so jct_engine.c
 ---
-
+```
 ## 🏮 JCT: Jinyan's Computational Toolkit 中文說明
 
 JCT 是一個輕量級、高效能的數值校準工具庫，專為天文 N-body 模擬與觀測數據對齊而設計。
@@ -58,3 +58,4 @@ JCT 是一個輕量級、高效能的數值校準工具庫，專為天文 N-body
 
 ---
 Maintained by Jinyan. Released under MIT License.
+
