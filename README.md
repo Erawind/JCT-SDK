@@ -29,6 +29,12 @@ By implementing an empirical **acceleration-threshold patch** ($a_0 \approx 1.21
 ## Installation & Usage
 
 ### 1. Build the Engine
+# Compile the C core into a shared library
+# Linux/macOS
+gcc -O3 -shared -fPIC -o jct_engine.so jct_engine.c 
+
+# Windows (MinGW)
+gcc -O3 -shared -o jct_engine.dll jct_engine.c
 
 ## JCT: Jinyan's Computational Toolkit (中文說明)
 
@@ -62,5 +68,6 @@ gcc -O3 -shared -fPIC -o jct_engine.so jct_engine.c
 
 # Windows (MinGW)
 gcc -O3 -shared -o jct_engine.dll jct_engine.c
+
 
 
