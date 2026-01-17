@@ -70,7 +70,7 @@ gcc -O3 -shared -fPIC -o jct_engine.so jct_engine.c
 
 ```
 
-## 🏮 JCT: Jinyan's Computational Toolkit 中文說明
+## JCT: Jinyan's Computational Toolkit 中文說明
 
 
 
@@ -117,3 +117,4 @@ JCT 是一個輕量級、高效能的數值校準工具庫，專為天文 N-body
 ---
 
 Maintained by Jinyan. Released under MIT License.
+
