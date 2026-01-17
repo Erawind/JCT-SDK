@@ -25,8 +25,10 @@ By implementing an empirical **acceleration-threshold patch** ($a_0 \approx 1.21
 | **Precision** | Double-precision Floating Point | Minimizes numerical drift in long-term orbits |
 | **Compatibility** | Python 3.x / NumPy / SciPy | Seamless integration for researchers |
 
----
----
+
+## Installation & Usage
+
+### 1. Build the Engine
 
 ## JCT: Jinyan's Computational Toolkit (中文說明)
 
@@ -60,4 +62,5 @@ gcc -O3 -shared -fPIC -o jct_engine.so jct_engine.c
 
 # Windows (MinGW)
 gcc -O3 -shared -o jct_engine.dll jct_engine.c
+
 
