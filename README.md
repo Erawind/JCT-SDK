@@ -1,40 +1,27 @@
 # JCT: Jinyan's Computational Toolkit (v1.0)
 
-> **[English]** | **[中文說明](#jct-jinyans-computational-toolkit-中文說明-1)**
+**[English]** | **[中文說明]**
+
+## 🌌 Overview / 概覽
+**[EN]** JCT is a high-performance numerical toolkit designed to address residuals in galaxy rotation curves and JWST early galaxy data via a $1.21 \times 10^{-10} \text{ m/s}^2$ threshold patch.
+**[中文]** JCT 是一個高效能數值工具庫，透過 $1.21 \times 10^{-10} \text{ m/s}^2$ 加速度閾值修正，解決星系旋轉曲線殘差與 JWST 早期星系數據偏差。
 
 ---
 
-## 🌌 Overview
-JCT is a lightweight, high-performance numerical calibration toolkit designed for astronomical N-body simulations and observational data alignment. 
+## 🛠 Technical Specifications / 技術規格
 
-By implementing an empirical **acceleration-threshold patch** ($a_0 \approx 1.21 \times 10^{-10} \text{ m/s}^2$), JCT addresses systematic residuals often found in:
-* **Galaxy Rotation Curves**: Resolving the velocity "drop-off" in the low-acceleration regime (consistent with the SPARC database).
-* **Early Galaxy Morphology**: Stabilizing high-redshift ($z > 7$) mass-luminosity structures, addressing the "Impossible Early Galaxy" problem identified by JWST.
-* **Cosmological Tensions**: Providing numerical pathways to mitigate the **$S_8$ Tension**.
-* **Long-term Stability**: Enhancing ephemeris stability and reducing numerical drift.
-
-> **Note:** This toolkit is strictly **data-driven**. It implements optimized empirical parameters derived from extensive residual analysis of observational datasets.
-
-
-
----
-
-## 🛠 Technical Specifications
-
-| Feature / Parameter | Specification | Purpose |
+| Feature / 特性 | Specification / 規格 | Purpose / 目的 |
 | :--- | :--- | :--- |
-| **Critical Threshold ($a_0$)** | $1.21 \times 10^{-10} \text{ m/s}^2$ | Defines the boundary for gravitational correction |
-| **Correction Logic** | $a_{jct} = a_n \cdot (1 + \sqrt{a_0/a_n})$ | Reconciles RAR (Radial Acceleration Relation) |
-| **Computational Core** | Native C (IEEE 754 Optimized) | Maximizes N-body throughput ($N > 10^5$) |
-| **Compatibility** | Python 3.x / NumPy / SciPy | Seamless integration for researchers |
+| **Threshold ($a_0$)** | $1.21 \times 10^{-10} \text{ m/s}^2$ | Defines the correction boundary / 定義修正邊界 |
+| **Correction Logic** | $a_{jct} = a_n \cdot (1 + \sqrt{a_0/a_n})$ | Reconciles RAR / 對齊徑向加速度關係 |
+| **Computing Core** | Native C (O3 Optimized) | High-throughput N-Body / 大規模質點模擬 |
 
 
 
 ---
 
-## 💻 Installation & Usage
+## 💻 Usage / 使用範例
 
-### 1. Build the Engine
 ```bash
-# Compile the C core into a shared library
+# Build C core / 編譯核心
 gcc -O3 -shared -fPIC -o jct_engine.so jct_engine.c
